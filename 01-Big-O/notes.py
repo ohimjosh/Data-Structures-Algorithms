@@ -37,7 +37,6 @@ def print_items(n):
 
 # Drop Constants
 
-
 def drop_constants(n):
     for i in range(n):
         print(i)
