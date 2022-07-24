@@ -49,4 +49,37 @@
 
 # -----------------------------------------------------------
 
+# Constructor
 
+# a node is essentially just a dictionary
+
+#{
+#    "value": 4,
+#    "next": None
+#}
+
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+        
+class LinkedList:
+    def __init__(self, value):
+        # create node and pass value onto it
+        new_node = Node(value)
+
+        # head points to new node
+        self.head = new_node
+
+        # tail points to new node
+        self.tail = new_node
+
+        # keep track of length
+        self.length = 1
+
+# creating a head, a tail and assigning the node value of 4 
+# and length of 1
+my_linked_list = LinkedList(4)
+
+print(my_linked_list.head.value)
