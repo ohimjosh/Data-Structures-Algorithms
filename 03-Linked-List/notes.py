@@ -83,3 +83,15 @@ class LinkedList:
 my_linked_list = LinkedList(4)
 
 print(my_linked_list.head.value)
+
+# -----------------------------------------------------------
+
+# print linked list
+
+def print_list(self):
+    temp = self.head
+    while temp is not None:
+        print(temp.value)
+        temp = temp.next
+
+# -----------------------------------------------------------
