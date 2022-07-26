@@ -23,3 +23,32 @@
 # since we will need to go through the list 
 
 # -----------------------------------------------------------
+
+# Constructor
+
+# creating a single node
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class Stack:
+    def __init__(self, value):
+        # create first node in the stack
+        new_node = Node(value)
+
+        # since we are stacking we only need top
+        self.top = new_node
+        self.height = 1
+
+    def print_stack(self):
+        temp = self.top
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
+
+my_stack = Stack(4)
+
+my_stack.print_stack()
+
+# -----------------------------------------------------------
