@@ -1,6 +1,8 @@
 # -----------------------------------------------------------
 # Stacks & Queues
 
+# Stacks
+
 # LIFO
 # Last In First Out
 
@@ -52,3 +54,15 @@ my_stack = Stack(4)
 my_stack.print_stack()
 
 # -----------------------------------------------------------
+
+# Queues
+
+# FIFO
+# First In First Out
+
+# adding to the queue is Enqueue
+# removing to the queue is Dequeue 
+
+# instead of head and tail 
+# we use first and last
+
