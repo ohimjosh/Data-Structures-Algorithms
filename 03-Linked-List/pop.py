@@ -86,3 +86,14 @@ my_linked_list = LinkedList(1)
 my_linked_list.append(2)
 
 my_linked_list.print_list()
+
+print("")
+
+# (2) Items - Returns 2 Node
+print(my_linked_list.pop())
+
+# (1) Items - Returns 1 Node
+print(my_linked_list.pop())
+
+# (0) Items - Returns None
+print(my_linked_list.pop())
