@@ -96,10 +96,45 @@ class LinkedList:
         self.length += 1
         return True
 
+    def pop_first(self):
+
+        if self.length == 0:
+            return None
+
+        
+
+        # temp keeps head value
+        temp = self.head
+
+        # move head pointer to the next value
+        self.head = self.head.next
+
+        # remove the pointer that was pointing to prev head
+        temp.next = None
+
+        self.length -= 1
+
+        if self.length == 0:
+            self.tail = None
+
+        return temp.value
+        # return temp
+
+
+
 my_linked_list = LinkedList(2)
 
-my_linked_list.append(3)
-
-my_linked_list.prepend(1)
+my_linked_list.append(1)
 
 my_linked_list.print_list()
+
+print("")
+
+# (2) Items - Returns 2 Node
+print(my_linked_list.pop_first())
+
+# (1) Items - Returns 1 Node
+print(my_linked_list.pop_first())
+
+# (0) Items - Returns None
+print(my_linked_list.pop_first())
