@@ -120,21 +120,22 @@ class LinkedList:
         return temp.value
         # return temp
 
+    def get(self, index):
+        if index < 0 or index >= self.length:
+            return None
 
+        temp = self.head
 
-my_linked_list = LinkedList(2)
+        for i in range(index):
+            temp = temp.next
+        return temp.value
+        #return temp
+
+my_linked_list = LinkedList(0)
 
 my_linked_list.append(1)
-
-my_linked_list.print_list()
+my_linked_list.append(2)
+my_linked_list.append(3)
 
 print("")
-
-# (2) Items - Returns 2 Node
-print(my_linked_list.pop_first())
-
-# (1) Items - Returns 1 Node
-print(my_linked_list.pop_first())
-
-# (0) Items - Returns None
-print(my_linked_list.pop_first())
+print(my_linked_list.get(2))
